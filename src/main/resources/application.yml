@@ -1,0 +1,41 @@
+#server:
+#  port: 8080
+# Actual environment
+spring:
+  profiles.active: dev
+---
+# Development Profile
+spring:
+  profiles: dev
+datasource:
+  central_repository:
+    host: localhost
+    port: 22
+    username: test
+    password: test123
+    upload_url: /
+    temp_url: /
+  proxy:
+    enabled: false
+    url: proxy.test.com
+    port: 8080
+
+
+
+---
+# Production Profile
+spring:
+  profiles: prod
+datasource:
+  central_repository:
+    host: localhost
+    port: 22
+    username: test
+    password: test123
+    upload_url: /
+    temp_url: /
+  proxy:
+    enabled: false
+    url: proxy.test.com
+    port: 8080
+
